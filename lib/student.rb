@@ -6,6 +6,8 @@ class Student
     new_student.id = row[0]
     new_student.name = row[1]
     new_student.name = row[2]
+    new_student
+  end
     
   end
 
