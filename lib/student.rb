@@ -22,7 +22,8 @@ class Student
   def self.find_by_name(name)
     sql = <<-SQL
     SELECT * FROM students WHERE name = ?
-    # return a new instance of the Student class
+    SQL
+    
   end
   
   def save
