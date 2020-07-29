@@ -23,8 +23,8 @@ class Student
     sql = <<-SQL
     SELECT * FROM students WHERE name = ?
     SQL
-    
-  end
+    @id = DB[:conn].execute("SELECT last_insert_rowid() FROM songs")[0][0]
+  end.first 
   
   def save
     sql = <<-SQL
