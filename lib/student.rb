@@ -22,9 +22,10 @@ class Student
   def self.find_by_name(name)
     sql = <<-SQL
     SELECT * FROM students WHERE name = ?
+    LIMIT 1
     SQL
     @id = DB[:conn].execute("SELECT last_insert_rowid() FROM songs")[0][0]
-    end
+    end.first
   end
   
   def save
