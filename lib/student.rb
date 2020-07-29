@@ -81,5 +81,8 @@ class Student
     sql = <<-SQL
     SELECT * 
     FROM students
-    WHERE
+    WHERE grade = ?
+    LIMIT ?
+    SQL
+    DB[:conn].execute(sql, )
 end
