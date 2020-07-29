@@ -76,4 +76,9 @@ class Student
       self.new_from_db(row)
     end
   end
+  
+  def self.first_X_students_in_grade_10
+    sql = <<-SQL
+    SELECT * 
+    FROM 
 end
