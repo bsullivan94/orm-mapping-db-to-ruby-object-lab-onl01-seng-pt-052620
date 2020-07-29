@@ -25,6 +25,7 @@ class Student
     LIMIT 1
     SQL
     @id = DB[:conn].execute(sql, name).map do |row|
+      select_new_from_db
     end.first
   end
   
